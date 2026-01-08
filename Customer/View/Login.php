@@ -7,7 +7,9 @@
 <html>
 
 <body>
-  
+    
+  <?php include '../Controller Logic/logincontroller.php'; ?>
+
 <form onsubmit="return handlesubmit()">
         <h1 style="text-align: center;">Sign in with your email</h1>
         Email:<br>
