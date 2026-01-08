@@ -26,4 +26,14 @@
         border-radius: 5px;
     }
     
-    
+    button
+    {
+        padding: 12px;
+        width: 100%;
+    }
+
+    .links
+    {
+        text-align: center;
+        margin-top: 20px;
+    }
