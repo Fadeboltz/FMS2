@@ -1,5 +1,4 @@
-<?php include '../Model/login_DB.php'; ?>
-<!DOCTYPE HTML>
+<?php include '../Controller Logic/logincontroller.php'; ?><!DOCTYPE HTML>
 <html>
 <head>
     <title>Login Page</title>
@@ -8,8 +7,6 @@
 <html>
 
 <body>
-
-  <?php include '../Controller Logic/logincontroller.php'; ?>
 
 <form onsubmit="return handlesubmit()">
         <h1 style="text-align: center;">Sign in with your email</h1>

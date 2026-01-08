@@ -15,20 +15,27 @@ function test_input($data) {
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     
-    if (empty($_POST["email"])) {
+    // Validate email
+    if (empty($_POST["email"])) 
+    {
         $emailErr = "Email is required";
-    } else {
-        $email = test_input($_POST["email"]);
-        if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-            $emailErr = "Invalid email format";
-        }
+    } 
+    else 
+    {
+        $email = trim($_POST["email"]);
     }
-
-    if (empty($_POST["password"])) {
+    // Validate password
+    if (empty($_POST["password"])) 
+    {
         $passErr = "Password is required";
     } 
-
-    if (empty($emailErr) && empty($passErr)) {
+    else 
+    {
+        $password = trim($_POST["password"]);
+    }
+    // Check database
+    if (empty($emailErr) && empty($passErr))
+    {
         $loginSuccess = true;
     }
 }
