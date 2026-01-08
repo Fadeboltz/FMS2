@@ -1,5 +1,7 @@
 <?php
 
+include '../Model/db_conn.php';
+
 $email = $password = "";
 $emailErr = $passErr = "";
 $loginSuccess = false;
