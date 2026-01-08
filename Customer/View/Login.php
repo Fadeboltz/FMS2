@@ -1,3 +1,4 @@
+<?php include '../Model/login_DB.php'; ?>
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -7,7 +8,7 @@
 <html>
 
 <body>
-    
+
   <?php include '../Controller Logic/logincontroller.php'; ?>
 
 <form onsubmit="return handlesubmit()">

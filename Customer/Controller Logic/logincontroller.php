@@ -1,5 +1,4 @@
 <?php
-include '../Model/login_DB.php';
 
 $email = $password = "";
 $emailErr = $passErr = "";
