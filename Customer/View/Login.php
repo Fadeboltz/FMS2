@@ -2,10 +2,12 @@
 <html>
 <head>
     <title>Login Page</title>
-</head>
+
+<link rel="stylesheet" href="../Stylesheet/Login.css"></head>
 <html>
 
 <body>
+  
 <form onsubmit="return handlesubmit()">
         <h1 style="text-align: center;">Sign in with your email</h1>
         Email:<br>
