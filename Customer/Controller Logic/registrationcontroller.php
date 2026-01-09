@@ -11,5 +11,19 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
     $confirmPassword = $_POST['confirmpassword']; 
     $accountType = $_POST['accounttype'];
 
+    if($password !== $confirmPassword){
+        echo "<script>alert('Passwords do not match!'); window.location.href='../View/Registration.php';</script>";
+        exit();
+    }
+
+    $user = [
+        'name'=> $name,
+        'contactno' => $contactno, 
+        'address' => $address,
+        'email' => $email,
+        'password' => $password, 
+        'accountType' => $accountType
+    ];
+
 }
 ?>
