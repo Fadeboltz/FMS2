@@ -6,12 +6,6 @@ $email = $password = "";
 $emailErr = $passErr = "";
 $loginSuccess = false;
 
-function test_input($data) {
-    $data = trim($data);
-    $data = stripslashes($data); 
-    $data = htmlspecialchars($data); 
-    return $data;
-}
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     
@@ -40,10 +34,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $safe_password = mysqli_real_escape_string($conn, $password);
 
         $sql = "SELECT * FROM users WHERE email='$safe_email' AND password='$safe_password'";
-        $result = $conn->query($sql);
-        if ($result->num_rows == 1) 
+        $result = mysqli_query($conn, $sql);
+        if (mysqli_num_rows($result) > 0) 
         {
-        $loginSuccess = true;
+            echo"<script>alert('Login Successful');</script>";
+            $loginSuccess = true;
+        } 
+        else 
+        {
+            echo"<script>alert('Invalid email or password');</script>";
+        }
+        
     }
 }
 ?>
