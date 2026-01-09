@@ -36,6 +36,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Check database
     if (empty($emailErr) && empty($passErr))
     {
+        $safe_email = mysqli_real_escape_string($conn, $email);
+        $safe_password = mysqli_real_escape_string($conn, $password);
+
+        $sql = "SELECT * FROM users WHERE email='$safe_email' AND password='$safe_password'";
+        $result = $conn->query($sql);
+        if ($result->num_rows == 1) 
+        {
         $loginSuccess = true;
     }
 }
