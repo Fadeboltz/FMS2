@@ -1,4 +1,6 @@
-<?php include '../Controller Logic/logincontroller.php'; ?>
+<?php 
+include '../Controller Logic/logincontroller.php'; 
+?>
 
 <!DOCTYPE HTML>
 <html>
