@@ -1,4 +1,6 @@
-<?php include '../Controller Logic/logincontroller.php'; ?><!DOCTYPE HTML>
+<?php include '../Controller Logic/logincontroller.php'; ?>
+
+<!DOCTYPE HTML>
 <html>
 <head>
     <title>Login Page</title>
