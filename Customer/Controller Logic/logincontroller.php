@@ -33,7 +33,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $safe_email = mysqli_real_escape_string($conn, $email);
         $safe_password = mysqli_real_escape_string($conn, $password);
 
-        $sql = "SELECT * FROM users WHERE email='$safe_email' AND password='$safe_password'";
+        $sql = "SELECT * FROM user WHERE email='$safe_email' AND password='$safe_password'";
         $result = mysqli_query($conn, $sql);
         if (mysqli_num_rows($result) > 0) 
         {
