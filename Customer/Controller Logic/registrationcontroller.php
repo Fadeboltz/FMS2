@@ -24,6 +24,17 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
         'password' => $password, 
         'accountType' => $accountType
     ];
+    $status = regUser($user);
 
+    if($status){
+        echo "<script>alert('Registration Successful'); window.location.href='../View/Login.php';</script>";
+        exit();
+    } else {
+        
+    }
+
+} else {
+    echo "Invalid Request.";
 }
+
 ?>
