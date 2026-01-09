@@ -39,8 +39,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         {
             echo"<script>alert('Login Successful');</script>";
             $loginSuccess = true;
-
-            exit();
         } 
         else 
         {
