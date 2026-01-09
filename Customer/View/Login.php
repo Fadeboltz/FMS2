@@ -12,15 +12,18 @@ include '../Controller Logic/logincontroller.php';
 
 <body>
 
-<form onsubmit="return handlesubmit()">
+<form method="POST" action="">
         <h1 style="text-align: center;">Sign in with your email</h1>
+       
         Email:<br>
         <input type="email" id="email" name="email" required placeholder="Please write your registered email">
+        <?php echo $emailErr; ?>
     
         <br><br>
         
         Password:<br>
         <input type="password" id="password" name="password" required placeholder="Please write your password">
+        <?php echo $passErr; ?>
         
         <br><br><br><br>
         <button type="submit">Login</button>

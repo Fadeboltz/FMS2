@@ -1,6 +1,6 @@
 <?php
 
-include '../Model/db_conn.php';
+include '../Model/login_DB.php';
 
 $email = $password = "";
 $emailErr = $passErr = "";
