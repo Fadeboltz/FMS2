@@ -1,5 +1,7 @@
 <?php
 
+session_start();
+
 include '../Model/login_DB.php';
 
 $email = $password = "";
@@ -37,7 +39,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $result = mysqli_query($conn, $sql);
         if (mysqli_num_rows($result) > 0) 
         {
-            echo"<script>alert('Login Successful');</script>";
+            $row = mysqli_fetch_assoc($result);
+
+            $_SESSION['user_id'] = $row['user_id'];
+            $_SESSION['Email'] = $row['Email'];
+            echo"<script>
+            alert('Login Successful');
+            window.location.href = 'demo.php';           
+            </script>";
             $loginSuccess = true;
         } 
         else 
