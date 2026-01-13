@@ -45,7 +45,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $_SESSION['Email'] = $row['Email'];
             echo"<script>
             alert('Login Successful');
-            window.location.href = 'demo.php';           
+            window.location.href = 'CustomerDashboard.php';           
             </script>";
             $loginSuccess = true;
         } 
