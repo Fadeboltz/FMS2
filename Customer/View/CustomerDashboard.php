@@ -42,4 +42,20 @@ if (mysqli_num_rows($result) > 0) {
                 <img src="../Images/<?php echo $row['image']; ?>" alt="Food">
         </div>
 
+        <div class="food-info">
+                <h3><?php echo htmlspecialchars($row['name']); ?></h3>
+                <div class="category-tag"><?php echo $row['category']; ?></div>
+                <div class="price">Tk <?php echo $row['price']; ?></div>
+                <button class="add-btn"
+                        onclick="addToCart('<?php echo $row['name']; ?>')">
+                    Add to Cart
+                </button>
+            </div>
+        </div>
+<?php
+    }
+} else {
+    echo "<h3>No items found</h3>";
+}
+?>
         
