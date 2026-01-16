@@ -14,7 +14,7 @@ $user_email = $_SESSION['Email'];
 
 $sql = "SELECT * FROM menu";
 
-if(isset($_GET['catergory']))
+if(isset($_GET['category']))
 {
     $cat = mysqli_real_escape_string($conn, $_GET['category']);
     if ($cat != 'All') {
