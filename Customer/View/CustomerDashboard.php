@@ -2,14 +2,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Raphael's World</title>
+    <title>Raphael's Kitchen</title>
     <link rel="stylesheet" href="../Stylesheet/CustomerDashboard.css">
 </head>
 
 <body>
 
 <div class="navbar">
-    <h2>Raphael's World</h2>
+    <h2>Raphael's Kitchen</h2>
     <div class="nav-links">
         <span>Hi, <?php echo htmlspecialchars($user_email); ?></span>
         <a href="#">My Cart (0)</a>
@@ -59,6 +59,6 @@ if (mysqli_num_rows($result) > 0) {
 }
 ?>
 </div>
-<script src="CustomerDashboard.js"></script>
+<script src="../Js/CustomerDashboard.js"></script>
 </body>
 </html>
