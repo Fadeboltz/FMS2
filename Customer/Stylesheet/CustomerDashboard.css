@@ -76,3 +76,13 @@ body {
     font-weight: bold;
     margin-bottom: 15px;
 }
+
+.add-btn {
+    background: #02182c;
+    color: white;
+    border: none;
+    padding: 12px;
+    width: 100%;
+    border-radius: 8px;
+    cursor: pointer;
+}
