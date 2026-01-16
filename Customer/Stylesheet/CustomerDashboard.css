@@ -61,3 +61,18 @@ body {
     object-fit: cover;
     display: block;
 }
+
+.food-info {
+    padding: 20px;
+}
+
+.category-tag {
+    color: #888;
+    margin-bottom: 8px;
+}
+
+.price {
+    color: #d70f64;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
