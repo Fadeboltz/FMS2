@@ -9,7 +9,7 @@
 <body>
 
 <div class="navbar">
-    <h2>Food Panda Clone</h2>
+    <h2>Raphael's World</h2>
     <div class="nav-links">
         <span>Hi, <?php echo htmlspecialchars($user_email); ?></span>
         <a href="#">My Cart (0)</a>
