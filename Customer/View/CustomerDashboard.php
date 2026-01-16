@@ -1,4 +1,4 @@
-<?php include '../Controller/CustomerDashboardController.php'; ?>
+<?php include '../Controller Logic/CustomerDashboardController.php'; ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -30,4 +30,16 @@
     <a href="CustomerDashboard.php?category=Sushi" class="filter-btn">🍣 Sushi</a>
     <a href="CustomerDashboard.php?category=Cake" class="filter-btn">🍰 Cake</a>
 </div>
-</body>
+
+<div class="menu-container">
+
+<?php
+if (mysqli_num_rows($result) > 0) {
+    while ($row = mysqli_fetch_assoc($result)) {
+?>
+        <div class="food-card">
+            <div class="food-img-box">
+                <img src="../Images/<?php echo $row['image']; ?>" alt="Food">
+        </div>
+
+        
