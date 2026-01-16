@@ -58,4 +58,7 @@ if (mysqli_num_rows($result) > 0) {
     echo "<h3>No items found</h3>";
 }
 ?>
-        
+</div>
+<script src="CustomerDashboard.js"></script>
+</body>
+</html>
