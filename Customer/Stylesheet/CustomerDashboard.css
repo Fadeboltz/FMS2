@@ -39,3 +39,12 @@ body {
     flex-wrap: wrap;
     justify-content: center;
 }
+
+.food-card {
+    background: white;
+    width: 280px;
+    margin: 15px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
