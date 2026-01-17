@@ -52,5 +52,31 @@ if (isset($_POST['add_to_cart'])) {
     exit();
 }
 
+if (isset($_POST['cart_action'])) {
+
+    $menu_id = (int)$_POST['menu_id'];
+
+    if ($_POST['cart_action'] === 'increase') {
+        $_SESSION['cart'][$menu_id]['qty']++;
+    }
+
+    if ($_POST['cart_action'] === 'decrease') {
+        $_SESSION['cart'][$menu_id]['qty']--;
+
+        if ($_SESSION['cart'][$menu_id]['qty'] <= 0) {
+            unset($_SESSION['cart'][$menu_id]);
+        }
+    }
+
+    if ($_POST['cart_action'] === 'remove') {
+        unset($_SESSION['cart'][$menu_id]);
+    }
+
+    header("Location: CustomerDashboard.php");
+    exit();
+}
+
+
+
 
 ?>
