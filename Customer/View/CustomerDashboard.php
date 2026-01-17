@@ -7,6 +7,9 @@
 </head>
 
 <body>
+<div class="dashboard-layout">
+       
+<!-- Left sidebar content -->
 
 <div class="navbar">
     <h2>Raphael's Kitchen</h2>
@@ -60,6 +63,7 @@ if (mysqli_num_rows($result) > 0) {
     echo "<h3>No items found</h3>";
 }
 ?>
+</div>
 </div>
 <?php
 echo '<pre>';
