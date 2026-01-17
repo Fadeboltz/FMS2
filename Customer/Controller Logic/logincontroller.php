@@ -2,7 +2,7 @@
 
 session_start();
 
-include '../Model/login_DB.php';
+include '../Model/db.php';
 
 $email = $password = "";
 $emailErr = $passErr = "";
@@ -40,7 +40,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         if (mysqli_num_rows($result) > 0) 
         {
             $row = mysqli_fetch_assoc($result);
-
             $_SESSION['user_id'] = $row['user_id'];
             $_SESSION['Email'] = $row['Email'];
             echo"<script>

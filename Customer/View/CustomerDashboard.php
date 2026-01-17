@@ -12,9 +12,9 @@
     <h2>Raphael's Kitchen</h2>
     <div class="nav-links">
         <span>Hi, <?php echo htmlspecialchars($user_email); ?></span>
-        <a href="#">My Cart (0)</a>
+        <a href="#">My Cart (<?php echo $cart_count; ?>)</a>
         <a href="#">My Orders</a>
-        <a href="Login.php">Logout</a>
+        <a href="../Controller Logic/logoutController.php">Logout</a>
     </div>
 </div>
 
@@ -80,7 +80,14 @@ if (mysqli_num_rows($result) > 0) {
         ?>
         <div class="cart-item">
                     <strong><?php echo $item['name']; ?></strong><br>
-                    Qty: <?php echo $item['qty']; ?><br>
+                    Qty: <?php echo $item['qty']; ?>
+                    <form method="post" style="display:inline;">
+                        <input type="hidden" name="menu_id" value="<?php echo $item['menu_id']; ?>">
+                        <button name="cart_action" value="increase">+</button>
+                        <button name="cart_action" value="decrease">−</button>
+                         <button name="cart_action" value="remove">Remove</button>
+                    </form>
+                    <br>
                     Tk <?php echo $subtotal; ?>
                 </div>
         <?php
