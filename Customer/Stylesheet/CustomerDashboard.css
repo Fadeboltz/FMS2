@@ -86,3 +86,25 @@ body {
     border-radius: 8px;
     cursor: pointer;
 }
+.dashboard-layout {
+    display: flex ;
+    gap: 20px;
+    padding: 20px;
+    align-items: flex-start;
+}
+
+.cart-panel {
+    flex: 1;
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    height: fit-content;
+    position: sticky;
+    top: 20px;
+}
+
+.cart-item {
+    margin-bottom: 15px;
+    font-size: 14px;
+}
