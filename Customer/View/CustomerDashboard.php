@@ -3,13 +3,10 @@
 <html>
 <head>
     <title>Raphael's Kitchen</title>
-    <link rel="stylesheet" href="../Stylesheet/CustomerDashboard.css">
+<link rel="stylesheet" href="../Stylesheet/CustomerDashboard.css">
 </head>
 
 <body>
-<div class="dashboard-layout">
-       
-<!-- Left sidebar content -->
 
 <div class="navbar">
     <h2>Raphael's Kitchen</h2>
@@ -34,6 +31,9 @@
     <a href="CustomerDashboard.php?category=Cake" class="filter-btn">🍰 Cake</a>
 </div>
 
+<div class="dashboard-layout">
+       
+<!-- Left sidebar content -->
 <div class="menu-container">
 
 <?php
@@ -64,12 +64,39 @@ if (mysqli_num_rows($result) > 0) {
 }
 ?>
 </div>
+
+<!-- Right sidebar content -->
+ <div class="cart-panel">
+    <h3>My Cart</h3>
+    <?php
+        if (!empty($_SESSION['cart'])) {
+
+            $total = 0; 
+
+            foreach ($_SESSION['cart'] as $item) {
+
+                $subtotal = $item['price'] * $item['qty'];
+                $total += $subtotal;
+        ?>
+        <div class="cart-item">
+                    <strong><?php echo $item['name']; ?></strong><br>
+                    Qty: <?php echo $item['qty']; ?><br>
+                    Tk <?php echo $subtotal; ?>
+                </div>
+        <?php
+            }
+        ?>
+            <hr>
+            <strong>Total: Tk <?php echo $total; ?></strong>
+
+        <?php
+        } else {
+            echo "<p>Your cart is empty</p>";
+        }
+        ?>
+    </div>
+
 </div>
-<?php
-echo '<pre>';
-print_r($_SESSION['cart']);
-echo '</pre>';
-?>
 
 <script src="../Js/CustomerDashboard.js"></script>
 </body>

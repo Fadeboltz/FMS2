@@ -35,9 +35,9 @@ body {
 }
 
 .menu-container {
+    flex: 3;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
 }
 
 .food-card {
