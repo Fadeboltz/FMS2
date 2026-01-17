@@ -76,7 +76,13 @@ if (isset($_POST['cart_action'])) {
     exit();
 }
 
+$cart_count = 0;
 
+if (!empty($_SESSION['cart'])) {
+    foreach ($_SESSION['cart'] as $item) {
+        $cart_count += $item['qty'];
+    }
+}
 
 
 ?>
