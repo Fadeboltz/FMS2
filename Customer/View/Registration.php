@@ -30,10 +30,8 @@
         <label for="confirmpassword">Confirm Password:</label><br>
         <input type="password" id="confirmpassword" name="confirmpassword" required><br><br>
 
-        <label for="accounttype">Account Type:</label><br>
-        <select id="accounttype" name="accounttype" required>
-            <option value="customer">Customer</option>
-            <option value="kitchenstaff">Kitchen Staff</option>
+        <input type="hidden" name="accounttype" value="customer">
+
         </select><br><br>
     
         <button type="submit">Register</button>
