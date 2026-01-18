@@ -49,13 +49,29 @@ if (mysqli_num_rows($result) > 0) {
         <div class="food-info">
                 <h3><?php echo htmlspecialchars($row['name']); ?></h3>
                 <div class="category-tag"><?php echo $row['category']; ?></div>
+                <p class="description">
+                    <?php echo htmlspecialchars($row['description']); ?>
+                 </p>
                 <div class="price">Tk <?php echo $row['price']; ?></div>
-                <form method="post">
-                    <input type="hidden" name="menu_id" value="<?php echo $row['menu_id']; ?>">
-                <button type="submit" name="add_to_cart" class="add-btn">
-                    Add to Cart
-                </button>
-            </form>
+                <?php
+            if ($row['availability'] == 1) {
+                echo '
+                    <form method="post">
+                        <input type="hidden" name="menu_id" value="'.$row['menu_id'].'">
+                        <button type="submit" name="add_to_cart" class="add-btn">
+                            Add to Cart
+                        </button>
+                    </form>
+                ';
+            } else {
+                echo '
+                    <span class="unavailable-text">Unavailable</span>
+                    <button class="add-btn disabled" disabled>
+                        Add to Cart
+                    </button>
+                ';
+            }
+            ?>
             </div>
         </div>
 <?php

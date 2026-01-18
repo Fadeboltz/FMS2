@@ -34,12 +34,13 @@ if (isset($_POST['checkout'])) {
     // Insert order items 
     foreach ($_SESSION['cart'] as $item) {
         $menu_id = $item['menu_id'];
+        $price   = $item['price'];
         $qty     = $item['qty'];
 
         mysqli_query(
             $conn,
-            "INSERT INTO order_items (order_id, menu_id, quantity)
-             VALUES ($order_id, $menu_id, $qty)"
+            "INSERT INTO order_items (order_id, menu_id, price, quantity)
+             VALUES ($order_id, $menu_id, $price, $qty)"
         );
     }
 
