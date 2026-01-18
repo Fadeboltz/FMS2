@@ -104,3 +104,20 @@ hr {
     background-color: #ddd;
     margin: 30px 0;
 }
+
+.back-dashboard {
+    display: inline-block;
+    margin-bottom: 20px;
+    padding: 10px 18px;
+    background-color: #02182c;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.back-dashboard:hover {
+    opacity: 0.9;
+}
+

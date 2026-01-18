@@ -15,6 +15,11 @@ include '../Controller Logic/OrderController.php';
 
 <h2>My Orders</h2>
 
+<a href="CustomerDashboard.php" class="btn back-dashboard">
+    ← Back to Dashboard
+</a>
+<hr>
+
 <h2>Ongoing Orders</h2>
 
 <?php
