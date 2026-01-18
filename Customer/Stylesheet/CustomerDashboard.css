@@ -117,3 +117,14 @@ body {
     cursor: pointer;
     font-size: 13px;
 }
+
+.cart-panel button[value="increase"] {
+    background-color: #4caf50;
+    color: white;
+}
+
+.cart-panel button[value="decrease"] {
+    background-color: #ff9800;
+    color: white;
+}
+
