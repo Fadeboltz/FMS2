@@ -1,5 +1,5 @@
 <?php
-require_once 'Registration_DB.php';
+require_once 'db.php';
 
 function regUser($user){
     global $conn; 

@@ -9,7 +9,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
     $email = $_POST['email'];
     $password = $_POST['password'];
     $confirmPassword = $_POST['confirmpassword']; 
-    $accountType = $_POST['accounttype'];
+    $accountType = 'customer';
 
     if($password !== $confirmPassword){
         echo "<script>alert('Passwords do not match!'); window.location.href='../View/Registration.php';</script>";

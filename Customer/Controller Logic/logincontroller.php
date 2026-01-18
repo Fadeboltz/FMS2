@@ -32,6 +32,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Check database
     if (empty($emailErr) && empty($passErr))
     {
+        
+        if ($email === 'admin' && $password === '123') {
+
+        $_SESSION['admin'] = true;
+
+        echo "<script>
+            alert('Kitchen Staff Login Successful');
+            window.location.href = '../Kitchen Staff/View/dashboard.php';
+        </script>";
+        exit();
+    }
+    
         $safe_email = mysqli_real_escape_string($conn, $email);
         $safe_password = mysqli_real_escape_string($conn, $password);
 
@@ -43,7 +55,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
             $_SESSION['user_id'] = $row['user_id'];
             $_SESSION['Email'] = $row['Email'];
-
+            $_SESSION['accountType'] = 'customer';
             $_SESSION['cart'] = [];
 
             echo"<script>
