@@ -9,6 +9,11 @@ include '../Controller Logic/OrderController.php';
     <link rel="stylesheet" href="../Stylesheet/CustomerDashboard.css">
 </head>
 <body>
+<div class="orders-container">
+
+<section class="orders-section">
+
+<h2>My Orders</h2>
 
 <h2>Ongoing Orders</h2>
 
@@ -17,6 +22,11 @@ if (mysqli_num_rows($ongoing_orders) > 0) {
     while ($order = mysqli_fetch_assoc($ongoing_orders)) {
 ?>
         <div class="order-card">
+            
+        <span class="status <?php echo strtolower($order['order_status']); ?>">
+                        <?php echo ucfirst($order['order_status']); ?>
+        </span>
+
             <strong>Order #<?php echo $order['order_id']; ?></strong><br>
             Total: Tk <?php echo $order['total_amount']; ?><br>
             Status: <?php echo $order['order_status']; ?><br>
@@ -42,6 +52,11 @@ if (mysqli_num_rows($order_history) > 0) {
     while ($order = mysqli_fetch_assoc($order_history)) {
 ?>
         <div class="order-card">
+
+        <span class="status <?php echo strtolower($order['order_status']); ?>">
+                        <?php echo ucfirst($order['order_status']); ?>
+        </span>
+
             <strong>Order #<?php echo $order['order_id']; ?></strong><br>
             Total: Tk <?php echo $order['total_amount']; ?><br>
             Status: <?php echo $order['order_status']; ?><br>
@@ -57,6 +72,7 @@ if (mysqli_num_rows($order_history) > 0) {
     echo "<p>No past orders</p>";
 }
 ?>
-
+</section>
+</div>
 </body>
 </html>
