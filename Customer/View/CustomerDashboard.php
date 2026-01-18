@@ -95,6 +95,25 @@ if (mysqli_num_rows($result) > 0) {
         ?>
             <hr>
             <strong>Total: Tk <?php echo $total; ?></strong>
+            <br><br>
+            <hr>
+
+            <div class="cart-actions">
+
+                <form method="post" action="/FMS2/Customer/Controller Logic/OrderController.php">
+                     <button type="submit" name="checkout" class="checkout-btn">
+                         Checkout
+                     </button>
+                </form>
+
+                <form method="post">
+                    <button type="submit" name="cart_action" value="clear" class="clear-btn">
+                        Clear Cart
+                    </button>
+                </form>
+
+</div>
+
 
         <?php
         } else {
