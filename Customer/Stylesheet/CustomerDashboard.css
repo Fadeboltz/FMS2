@@ -128,3 +128,9 @@ body {
     color: white;
 }
 
+.cart-panel button[value="remove"] {
+    background-color: #f44336;
+    color: white;
+}
+
+
