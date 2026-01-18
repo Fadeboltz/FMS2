@@ -4,6 +4,7 @@
 <html>
 <head>
     <title>Order Details</title>
+    <link rel="stylesheet" href="../Stylesheet/OrderDetails.css">
 </head>
 <body>
 
@@ -51,16 +52,16 @@ while ($item = mysqli_fetch_assoc($items)) {
 </div>
 
 <div class="order-actions">
-<a href="Order.php">← Back to Orders</a>
+<a href="Order.php" class="btn back">← Back to Orders</a>
 
-<?php if ($order['order_status'] == 'pending') { ?>
+<?php if (strtolower($order['order_status']) == 'pending') { ?>
     <form method="post"
           action="../Controller Logic/OrderController.php"
           onsubmit="return confirm('Are you sure you want to cancel this order?');">
 
         <input type="hidden" name="order_id" value="<?php echo $order['order_id']; ?>">
 
-        <button type="submit" name="cancel_order">
+        <button type="submit" name="cancel_order" class="btn cancel">
             Cancel Order
         </button>
     </form>
