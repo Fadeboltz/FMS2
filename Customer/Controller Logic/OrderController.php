@@ -73,5 +73,24 @@ if (isset($_POST['cancel_order'])) {
     exit();
 }
 
+// Ongoing Orders 
+$ongoing_orders = mysqli_query(
+    $conn,
+    "SELECT * FROM orders 
+     WHERE user_id = $user_id 
+     AND order_status != 'delivered'
+     AND order_status != 'cancelled'
+     ORDER BY order_time DESC"
+);
+
+// Order History 
+$order_history = mysqli_query(
+    $conn,
+    "SELECT * FROM orders 
+     WHERE user_id = $user_id 
+     AND (order_status = 'delivered' 
+          OR order_status = 'cancelled')
+     ORDER BY order_time DESC"
+);
 
 ?>
