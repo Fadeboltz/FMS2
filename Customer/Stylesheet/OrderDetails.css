@@ -39,8 +39,8 @@ body {
 }
 
 .status.cooking {
-    background: #cce5ff;
-    color: #004085;
+    background: #ffe5b4;
+    color: #b45309;
 }
 
 .status.ready {
