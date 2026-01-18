@@ -12,7 +12,7 @@
 
 <h2>Order #<?php echo $order['order_id']; ?></h2>
 
-<div class="order-meta">
+<div class="order-mm">
  <span class="status <?php echo strtolower($order['order_status']); ?>">
          <?php echo ucfirst($order['order_status']); ?>
 </span>
