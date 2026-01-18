@@ -3,7 +3,7 @@
 session_start();
 
 include '../Controller Logic/CartController.php';
-include '../Model/CustomerDashboard_db.php';
+include '../Model/db.php';
 
 if(!isset($_SESSION['user_id'])) 
 {
