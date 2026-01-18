@@ -6,7 +6,7 @@ include '../Controller Logic/OrderController.php';
 <html>
 <head>
     <title>My Orders</title>
-    <link rel="stylesheet" href="../Stylesheet/CustomerDashboard.css">
+    <link rel="stylesheet" href="../Stylesheet/Order.css">
 </head>
 <body>
 <div class="orders-container">
