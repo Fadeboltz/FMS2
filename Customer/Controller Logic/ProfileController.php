@@ -7,3 +7,8 @@ if (!isset($_SESSION['user_id'])) {
     exit();
 }
 
+$user_id = (int)$_SESSION['user_id'];
+$success = $error = "";
+
+$result = mysqli_query($conn, "SELECT * FROM user WHERE user_id = $user_id");
+$user = mysqli_fetch_assoc($result);
