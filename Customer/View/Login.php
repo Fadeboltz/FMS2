@@ -29,7 +29,7 @@ include '../Controller Logic/logincontroller.php';
         <button type="submit" name="Login_btn">Login</button>
 
         <div class="links">
-            <a href="">Not a user? Sign Up</a><br>
+            <a href="Registration.php">Not a user? Sign Up</a><br>
             <a href="">Forgot Password?</a><br>
     </form>
 </body>
