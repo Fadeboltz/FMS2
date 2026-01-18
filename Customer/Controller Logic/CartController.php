@@ -1,6 +1,6 @@
 <?php
 
-include '../Model/CustomerDashboard_db.php';
+include '../Model/db.php';
 
 if(session_status() == PHP_SESSION_NONE){
     session_start();
