@@ -15,6 +15,17 @@
 
 <h3>Items</h3>
 
+<?php
+$total = 0;
 
+while ($item = mysqli_fetch_assoc($items)) {
+    $subtotal = $item['price'] * $item['quantity'];
+    $total += $subtotal;
+    ?>
+    <p>
+        <?php echo $item['name']; ?> × <?php echo $item['quantity']; ?>
+        — Tk <?php echo $subtotal; ?>
+    </p>
+<?php } ?>
 </body>
 </html>
