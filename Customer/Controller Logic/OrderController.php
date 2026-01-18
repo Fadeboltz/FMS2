@@ -53,6 +53,25 @@ if (isset($_POST['checkout'])) {
     exit();
 }
 
+if (isset($_POST['cancel_order'])) {
+
+    $order_id = (int)$_POST['order_id'];
+    $user_id  = $_SESSION['user_id'];
+
+    mysqli_query(
+        $conn,
+        "UPDATE orders 
+         SET order_status = 'cancelled'
+         WHERE order_id = $order_id
+         AND user_id = $user_id
+         AND order_status = 'pending'"
+    );
+
+    $_SESSION['order_success'] = "Order cancelled successfully.";
+
+    header("Location: ../View/Order.php");
+    exit();
+}
 
 
 ?>
