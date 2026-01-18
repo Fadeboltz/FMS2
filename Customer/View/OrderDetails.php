@@ -7,9 +7,18 @@
 </head>
 <body>
 
+<div class="order-details-container">
+
 <h2>Order #<?php echo $order['order_id']; ?></h2>
-<p>Status: <?php echo $order['order_status']; ?></p>
-<p>Date: <?php echo $order['order_time']; ?></p>
+
+<div class="order-meta">
+ <span class="status <?php echo strtolower($order['order_status']); ?>">
+         <?php echo ucfirst($order['order_status']); ?>
+</span>
+<span class="date">
+         <?php echo $order['order_time']; ?></p>
+</span>
+</div>
 
 <hr>
 
