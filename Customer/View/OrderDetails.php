@@ -24,6 +24,8 @@
 
 <h3>Items</h3>
 
+<div class="items-list">
+
 <?php
 $total = 0;
 
@@ -31,15 +33,24 @@ while ($item = mysqli_fetch_assoc($items)) {
     $subtotal = $item['price'] * $item['quantity'];
     $total += $subtotal;
     ?>
-    <p>
-        <?php echo $item['name']; ?> × <?php echo $item['quantity']; ?>
+    <div class="item-row">
+
+       <span><?php echo $item['name']; ?> × <?php echo $item['quantity']; ?>
         — Tk <?php echo $subtotal; ?>
-    </p>
+    </span>
+    </div>
 <?php } ?>
+
 <hr>
+
+<div class="total-row">
+
+<strong>Total</strong>
 <strong>Total: Tk <?php echo $total; ?></strong>
 
-<br><br>
+</div>
+
+<div class="order-actions">
 <a href="Order.php">← Back to Orders</a>
 
 <?php if ($order['order_status'] == 'pending') { ?>
@@ -54,8 +65,8 @@ while ($item = mysqli_fetch_assoc($items)) {
         </button>
     </form>
 <?php } ?>
-
-
+</div>
+</div>
 
 </body>
 </html>
