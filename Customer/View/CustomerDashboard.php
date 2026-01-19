@@ -117,7 +117,7 @@ if (mysqli_num_rows($result) > 0) {
 
             <div class="cart-actions">
 
-                <form method="post" action="/FMS2/Customer/Controller Logic/OrderController.php">
+                <form method="post" action="../Controller Logic/OrderController.php">
                      <button type="submit" name="checkout" class="checkout-btn">
                          Checkout
                      </button>
