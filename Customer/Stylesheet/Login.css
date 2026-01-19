@@ -56,3 +56,24 @@ form
         text-align: center;
         margin-top: 20px;
     }
+.remember-box {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 12px 0 18px;
+    font-size: 14px;
+    color: #333;
+}
+
+.remember-box input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+      width: auto;
+    margin: 0;
+    cursor: pointer;
+}
+
+.remember-box label {
+    cursor: pointer;
+    user-select: none;
+}
