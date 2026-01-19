@@ -189,7 +189,7 @@ hr {
     opacity: 0.9;
 }
 
-/* 🔥 FIX LAYOUT */
+/* FIX LAYOUT */
 .bottom-section {
     display: flex;
     align-items: stretch;
