@@ -121,3 +121,44 @@ hr {
     opacity: 0.9;
 }
 
+.review-btn {
+    position: absolute;
+    bottom: 18px;
+    right: 20px;
+
+    background-color: #28a745;
+    color: white;
+    padding: 6px 14px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.review-btn:hover {
+    background-color: #218838;
+}
+
+.order-actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+
+.btn {
+    padding: 8px 14px;
+    background: #02182c;
+    color: white;
+    border-radius: 6px;
+    text-decoration: none;
+}
+
+.btn.review {
+    background: #0b3a6f;
+}
+
+.reviewed-text {
+    color: green;
+    font-weight: bold;
+}
+

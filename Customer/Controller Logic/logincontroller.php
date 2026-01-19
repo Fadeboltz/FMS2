@@ -4,8 +4,19 @@ session_start();
 
 include '../Model/db.php';
 
-if (isset($_SESSION['user_id']) || isset($_SESSION['admin'])) {
-    return;
+$email = $password = "";
+$emailErr = $passErr = "";
+$loginSuccess = false;
+
+
+if (isset($_SESSION['admin'])) {
+    header("Location: /FMS2/Kitchen Staff/View/dashboard.php");
+    exit();
+}
+
+if (isset($_SESSION['user_id'])) {
+    header("Location: /FMS2/Customer/View/CustomerDashboard.php");
+    exit();
 }
 
 if (!isset($_POST['Login_btn']) && isset($_COOKIE['remember_role'])) {
@@ -33,11 +44,6 @@ if (!isset($_POST['Login_btn']) && isset($_COOKIE['remember_role'])) {
         }
     }
 }
-
-$email = $password = "";
-$emailErr = $passErr = "";
-$loginSuccess = false;
-
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     
